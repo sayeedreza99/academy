@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import fakeData from '../../fakeData/fakeData';
 import './CourseArea.css';
-import Course from './Course/Course';
+import Course from '../Course/Course';
 import SelectedCourse from '../SelectedCourse/SelectedCourse';
 
 
 const CourseArea = () => {
-    const [course, setCourse] = useState(fakeData);
-    // console.log(fakeData);
+    const [course, setCourse] = useState([]);
+    useEffect(() => {
+        setCourse(fakeData)
+    }, [])
     const [cart, setCart] = useState([])
 
     const handleAddCourse = (course) => {
@@ -27,7 +29,6 @@ const CourseArea = () => {
             </div>
             <div className='selected-course-container'>
                 <h1>Selected Course</h1>
-                <h5>Order Summary:{cart.length}</h5>
                 <SelectedCourse cart={cart}></SelectedCourse>
 
             </div>

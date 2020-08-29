@@ -1,9 +1,18 @@
 .course-container{
     display: flex;
+    
+}
+.course-container h1{
+    text-align: center;
 }
 .course-list-container{
-    width: 70%;
+    width: 67%;
     margin-left: 20px;
     margin-right: 5px;
     border-right: 1px solid lightgray;
+    
 }
+.selected-course-container{
+    width: 30%;
+}
+
