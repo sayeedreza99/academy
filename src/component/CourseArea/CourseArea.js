@@ -22,13 +22,13 @@ const CourseArea = () => {
     return (
         <div className='course-container'>
             <div className="course-list-container">
-                <h1>Course List</h1>
+                <h1 className="text-danger">Course List</h1>
                 {
                     course.map(n => <Course handleAddCourse={handleAddCourse} course={n}></Course>)
                 }
             </div>
             <div className='selected-course-container'>
-                <h1>Selected Course</h1>
+                <h1 className="text-danger">Selected Course</h1>
                 <SelectedCourse cart={cart}></SelectedCourse>
 
             </div>

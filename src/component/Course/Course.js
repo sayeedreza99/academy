@@ -6,7 +6,7 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons'
 const Course = (props) => {
     // console.log(props);
     const { name, img, mentor, rating, price } = props.course;
-    const btnStyle = { color: 'white', backgroundColor: 'goldenrod', borderRadius: '5px', width: '150px', height: '30px' };
+    const btnStyle = { color: 'white', backgroundColor: 'goldenrod', width: '150px', height: '35px' };
     const imgStyle = { width: '25%', marginRight: '10px', padding: '10px' };
     return (
         <div style={{ display: 'flex', borderBottom: '1px solid lightgray' }}>
@@ -16,7 +16,7 @@ const Course = (props) => {
                 <h4>Instructor: {mentor}</h4>
                 <p><small> Rating: {rating}</small></p>
                 <h4>Price: ${price}</h4>
-                <button style={btnStyle} onClick={() => props.handleAddCourse(props.course)}> <FontAwesomeIcon icon={faPlus} />Enroll now</button>
+                <button class="btn btn-warning" style={btnStyle} onClick={() => props.handleAddCourse(props.course)}> <FontAwesomeIcon icon={faPlus} />Enroll now</button>
             </div>
 
         </div >
