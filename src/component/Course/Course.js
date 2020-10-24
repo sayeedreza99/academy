@@ -1,11 +1,11 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom';
 
 
 const Course = (props) => {
-    // console.log(props);
-    const { name, img, mentor, rating, price } = props.course;
+    const { name, img, mentor, rating, price, id } = props.course;
     const btnStyle = { color: 'white', backgroundColor: 'goldenrod', width: '150px', height: '35px' };
     const imgStyle = { marginRight: '10px', padding: '10px' };
     return (
@@ -15,7 +15,7 @@ const Course = (props) => {
                     <img style={imgStyle} src={img} alt="" />
                 </div>
                 <div className='col-md-8'>
-                    <h4>Course Name: {name}</h4>
+                    <h4><Link to={"/course/" + id}>{name}</Link></h4>
                     <h5>Instructor: {mentor}</h5>
                     <p><small> Rating: {rating}</small></p>
                     <h4>Price: ${price}</h4>

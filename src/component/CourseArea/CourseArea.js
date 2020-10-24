@@ -27,7 +27,7 @@ const CourseArea = () => {
                     course.map(n => <Course handleAddCourse={handleAddCourse} course={n}></Course>)
                 }
             </div>
-            <div className='selected-course-container'>
+            <div className="selected-course-container">
                 <h1 className="text-danger">Selected Course</h1>
                 <SelectedCourse cart={cart}></SelectedCourse>
 
